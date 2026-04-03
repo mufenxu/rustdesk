@@ -1,9 +1,8 @@
-# Security Policy
+# 安全策略
 
-## Reporting a Vulnerability
+## 报告漏洞
 
-We value security for the project very highly. We encourage all users to report any vulnerabilities they discover to us.
-If you find a security vulnerability in the RustDesk project, please report it responsibly by sending an email to info@rustdesk.com.
+我们非常重视项目的安全性。我们鼓励所有用户向我们报告发现的任何漏洞。
+如果您在 RustDesk 项目中发现安全漏洞，请通过发送电子邮件至 info@rustdesk.com 进行负责任地报告。
 
-At this juncture, we don't have a bug bounty program. We are a small team trying to solve a big problem. We urge you to report any vulnerabilities responsibly
-so that we can continue building a secure application for the entire community.
+目前，我们还没有漏洞赏金计划。我们是一个试图解决大问题的小团队。我们敦促您负责任地报告任何漏洞，以便我们可以继续为整个社区构建安全的应用程序。

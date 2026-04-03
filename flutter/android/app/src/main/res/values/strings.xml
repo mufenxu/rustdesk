@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">万联远程</string>
+    <string name="accessibility_service_description">允许其他设备通过虚拟触控控制您的手机，需在建立屏幕共享连接后使用</string>
+</resources>

@@ -36,7 +36,6 @@ dependencies:
   #firebase_analytics: ^9.1.5
   package_info_plus: ^4.2.0
   url_launcher: ^6.3.1
-  url_launcher_ios: ^6.3.2
   toggle_switch: ^2.1.0
   dash_chat_2:
     git:
@@ -127,16 +126,8 @@ dependency_overrides:
 # rerun: flutter pub run flutter_launcher_icons
 flutter_icons:
   image_path: "../res/icon.png"
-  remove_alpha_ios: true
   android: true
-  ios: true
   windows:
-    generate: true
-  macos:
-    image_path: "../res/mac-icon.png"
-    generate: true
-  linux: true
-  web:
     generate: true
 
 # For information on the generic Dart part of this file, see the

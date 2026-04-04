@@ -1664,16 +1664,23 @@ Future<bool> matchPeer(
 
 /// Get the image for the current [platform].
 Widget getPlatformImage(String platform, {double size = 50}) {
+  debugPrint('getPlatformImage: platform=$platform');
+  platform = platform.trim().toLowerCase();
   if (platform.isEmpty) {
-    return Container(width: size, height: size);
+    return Icon(Icons.computer, size: size * 0.8, color: Colors.white70);
   }
-  if (platform == kPeerPlatformMacOS) {
+  if (platform == 'mac os' || platform == 'macos' || platform == 'mac') {
     platform = 'mac';
-  } else if (platform != kPeerPlatformLinux &&
-      platform != kPeerPlatformAndroid) {
-    platform = 'win';
+  } else if (platform == 'linux') {
+    platform = 'linux';
+  } else if (platform == 'android') {
+    platform = 'android';
+  } else if (platform == 'ios') {
+    return Icon(Icons.phone_iphone, size: size * 0.8, color: Colors.white70);
+  } else if (platform == 'webdesktop' || platform == 'web') {
+    return Icon(Icons.web, size: size * 0.8, color: Colors.white70);
   } else {
-    platform = platform.toLowerCase();
+    platform = 'win';
   }
   return SvgPicture.asset('assets/$platform.svg', height: size, width: size);
 }

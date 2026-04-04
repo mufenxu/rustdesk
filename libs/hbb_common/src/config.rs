@@ -1814,12 +1814,8 @@ impl PeerConfig {
             .iter()
             .map(|(id, t, p)| {
                 let c = PeerConfig::load(&id);
-                if c.info.platform.is_empty() {
-                    fs::remove_file(p).ok();
-                }
                 (id.clone(), t.clone(), c)
             })
-            .filter(|p| !p.2.info.platform.is_empty())
             .collect();
         (peers, to)
     }

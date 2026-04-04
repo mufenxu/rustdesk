@@ -1665,9 +1665,6 @@ Future<bool> matchPeer(
 /// Get the image for the current [platform].
 Widget getPlatformImage(String platform, {double size = 50}) {
   platform = platform.trim().toLowerCase();
-  if (platform.isEmpty) {
-    return Icon(Icons.computer, size: size * 0.8, color: Colors.white70);
-  }
   if (platform == 'mac os' || platform == 'macos' || platform == 'mac') {
     platform = 'mac';
   } else if (platform == 'linux') {

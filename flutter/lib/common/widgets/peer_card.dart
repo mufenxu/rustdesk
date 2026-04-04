@@ -158,10 +158,8 @@ class _PeerCardState extends State<_PeerCard>
             height: isPortrait ? 50 : null,
             child: Stack(
               children: [
-                Builder(builder: (context) {
-                  return getPlatformImage(peer.platform, size: isPortrait ? 38 : 30)
-                      .paddingAll(6);
-                }),
+                getPlatformImage(peer.platform, size: isPortrait ? 38 : 30)
+                    .paddingAll(6),
                 if (_shouldBuildPasswordIcon(peer))
                   Positioned(
                     top: 1,

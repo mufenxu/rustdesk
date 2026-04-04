@@ -2508,13 +2508,16 @@ impl LoginConfigHandler {
             self.version = hbb_common::get_version_number(&pi.version);
         }
         self.features = pi.features.clone().into_option();
-        let serde = PeerInfoSerde {
-            username: pi.username.clone(),
-            hostname: pi.hostname.clone(),
-            platform: pi.platform.clone(),
-        };
         let mut config = self.load_config();
-        config.info = serde;
+        if !pi.username.is_empty() {
+            config.info.username = pi.username.clone();
+        }
+        if !pi.hostname.is_empty() {
+            config.info.hostname = pi.hostname.clone();
+        }
+        if !pi.platform.is_empty() {
+            config.info.platform = pi.platform.clone();
+        }
         let password = self.password.clone();
         let password0 = config.password.clone();
         let remember = self.remember;

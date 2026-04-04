@@ -1664,7 +1664,6 @@ Future<bool> matchPeer(
 
 /// Get the image for the current [platform].
 Widget getPlatformImage(String platform, {double size = 50}) {
-  debugPrint('getPlatformImage: platform=$platform');
   platform = platform.trim().toLowerCase();
   if (platform.isEmpty) {
     return Icon(Icons.computer, size: size * 0.8, color: Colors.white70);
